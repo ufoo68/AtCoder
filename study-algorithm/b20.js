@@ -1,5 +1,7 @@
-const S='kyoto'
-const T='tokyo'
+const inputs = require("fs").readFileSync("/dev/stdin", "utf8").split('\n')
+
+const S=inputs[0]
+const T=inputs[1]
 
 const dp=[...new Array(S.length+1)].map(() => [...new Array(T.length+1)].map(() => 0))
 for(let i=0; i<=S.length; i++) dp[i][0] = i
